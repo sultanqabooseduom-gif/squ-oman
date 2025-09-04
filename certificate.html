@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Certificate Verification</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 100px; }
+    h2 { color: #2c3e50; }
+    p { font-size: 18px; }
+  </style>
+</head>
+<body>
+
+<h2>Certificate Verified by Sultan Qaboos University</h2>
+<p id="certificateNumber">Certificate Number: </p>
+<p id="holderName">Holder: </p>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const name = urlParams.get('name') || 'Unknown';
+  const number = urlParams.get('number') || 'Unknown';
+
+  document.getElementById('certificateNumber').textContent = 'Certificate Number: ' + number;
+  document.getElementById('holderName').textContent = 'Holder: ' + name;
+</script>
+
+</body>
+</html>
